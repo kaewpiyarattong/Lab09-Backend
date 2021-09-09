@@ -6,8 +6,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import se331.lab.rest.dao.EventDao;
 import se331.lab.rest.dao.OrganizerDao;
+import se331.lab.rest.dao.ParticipantDao;
 import se331.lab.rest.entity.Event;
 import se331.lab.rest.entity.Organizer;
+import se331.lab.rest.entity.Participant;
 
 @Service
 public class EventServiceImpl implements EventService{
@@ -37,6 +39,7 @@ public class EventServiceImpl implements EventService{
         Organizer organizer = organizerDao.findById(event.getOrganizer().getId()).orElse(null);
         event.setOrganizer(organizer);
         organizer.getOwnEvents().add(event);
+
         return eventDao.save(event);
     }
 }

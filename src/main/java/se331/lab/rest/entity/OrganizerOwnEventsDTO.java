@@ -14,10 +14,10 @@ import java.util.List;
 public class OrganizerOwnEventsDTO {
     Long id;
     String category;
+    String title;
     String description;
     String location;
     String date;
     String time;
     Boolean petAllowed;
-    List<Participant> participants;
 }

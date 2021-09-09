@@ -12,8 +12,9 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrganizerDTO {
+public class ParticipantDTO {
     Long id;
     String name;
-    List<OrganizerOwnEventsDTO> ownEvents = new ArrayList<>();
+    String telNo;
+    List<ParticipantEventHistoryDTO> eventHistory = new ArrayList<>();
 }
