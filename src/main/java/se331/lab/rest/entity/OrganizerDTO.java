@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class EventOrganizerDTO {
+public class OrganizerDTO {
     Long id;
     String name;
 }
